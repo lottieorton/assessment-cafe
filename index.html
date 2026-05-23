@@ -4,8 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wireframe project</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="https://kit.fontawesome.com/4f07e26e28.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <i class="fa-solid fa-mug-hot header-icon"></i>
+        <ul class="nav-links">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1 class="large-heading">The Pink Coffee Corner</h1>
+        <p>Best coffee in Melbourne</p>
+        <a href="#reviews" class="btn">See reviews</a>
+        <img src="./assets/hero_image.jpg" alt="Pink cafe" />
+    </header>
+    <main>
+        <section class="menu">
+            <h2 class="large-heading">Our Menu</h2>
+            <div class="menu-category">
+                <h3>Food</h3>
+                <div class="menu-grid">
+                    <article class="card">
+                        <img src="./assets/vanilla_cake.jpg" alt="Chocolate cupcake">
+                        <h4 class="menu-item-name">Chocolate Cupcake</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-leaf dietary-icon"></i>
+                            <p class="dietary-label">Vegan</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="./assets/donuts.jpg" alt="Donut">
+                        <h4 class="menu-item-name">Donuts</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-wheat-awn-circle-exclamation dietary-icon"></i>
+                            <p class="dietary-label">Gluten Free</p>
+                        </div>
+                    </article> 
+                    <article class="card">
+                        <img src="./assets/raspberry_cupcake.jpg" alt="Raspberry cupcake" />
+                        <h4 class="menu-item-name">Raspberry Cupcake</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-leaf dietary-icon"></i>
+                            <p class="dietary-label">Vegan</p>
+                        </div>
+                        <div class="dietary">
+                            <i class="fa-solid fa-wheat-awn-circle-exclamation dietary-icon"></i>
+                            <p class="dietary-label">Gluten Free</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="./assets/vanilla_cake.jpg" alt="Vanilla cake">
+                        <h4 class="menu-item-name">Vanilla Cake</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-egg dietary-icon"></i>
+                            <p class="dietary-label">Contains Eggs</p>
+                        </div>
+                    </article>  
+                    <article class="card">
+                        <img src="./assets/cheesecake.jpg" alt="Cheesecake">
+                        <h4 class="menu-item-name">Cheesecake</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-egg dietary-icon"></i>
+                            <p class="dietary-label">Contains Eggs</p>
+                        </div>
+                        <div class="dietary">
+                            <i class="fa-solid fa-cow dietary-icon"></i>
+                            <p class="dietary-label">Contains Dairy</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>Drinks</h3>
+                <div class="menu-grid">
+                    <article class="card">
+                        <img src="./assets/coffee.jpg" alt="Flat white">
+                        <h4 class="menu-item-name">Flat White</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-leaf dietary-icon"></i>
+                            <p class="dietary-label">Vegan Options Available</p>
+                        </div> 
+                    </article>
+                    <article class="card">
+                        <img src="./assets/green_smoothie.jpg" alt="Green smoothie">
+                        <h4 class="menu-item-name">Green Smoothie</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-leaf dietary-icon"></i>
+                            <p class="dietary-label">Vegan Options Available</p>
+                        </div> 
+                    </article>
+                    <article class="card">
+                        <img src="./assets/peanut_smoothie.jpg" alt="Peanut butter smoothie">
+                        <h4 class="menu-item-name">Peanut Butter Smoothie</h4>
+                        <div class="dietary">
+                            <i class="fa-solid fa-leaf dietary-icon"></i>
+                            <p class="dietary-label">Vegan Options Available</p>
+                        </div>
+                        <div class="dietary">
+                            <i class="fa-solid fa-hand-dots dietary-icon"></i>
+                            <p class="dietary-label">Contains Nuts</p>
+                        </div> 
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <h2 class="large-heading">Reviews</h2>
+            <div class="review-listings">
+                <article class="review">
+                    <div class="review-contents">
+                        <i class="fa-solid fa-quote-left quote-left"></i>
+                        <p>The Pink Coffee Corner is amazing! Cozy ambiance, perfect lattes, and friendly staff. The avocado toast is a must-try. Definitely coming back!</p>
+                        <i class="fa-solid fa-quote-right quote-right"></i>
+                    </div>
+                    <div class="review-details">
+                        <p class="review-name">Sarah L.</p>
+                        <p class="review-date">8th July 2024</p>
+                    </div>
+                </article>
+                <article class="review">
+                    <div class="review-contents">
+                        <i class="fa-solid fa-quote-left quote-left"></i>
+                        <p>Great spot for coffee lovers. Smooth flat white and delicious cake. It can get crowded at lunchtime, but worth the visit for the quality and friendly service.</p>
+                        <i class="fa-solid fa-quote-right quote-right"></i>
+                    </div>
+                    <div class="review-details">
+                        <p class="review-name">John M.</p>
+                        <p class="review-date">8th July 2024</p>
+                    </div>
+                </article>
+                <article class="review">
+                    <div class="review-contents">
+                        <i class="fa-solid fa-quote-left quote-left"></i>
+                        <p>The Pink Coffee Corner is my favorite! Perfect mocha, tasty almond croissant, and a welcoming atmosphere. Free Wi-Fi is a bonus. Can't wait to return!</p>
+                        <i class="fa-solid fa-quote-right quote-right"></i>
+                    </div>
+                    <div class="review-details">
+                        <p class="review-name">Jenny B.</p>
+                        <p class="review-date">4th June 2023</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copyright-info">
+            <i class="fa-solid fa-mug-hot footer-icon"></i>
+            <p>Copyright 2024</p>
+        </div>
+        <i class="fa-brands fa-square-instagram social-icon"></i>
+    </footer>
 </body>
 </html>
