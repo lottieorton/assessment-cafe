@@ -1,0 +1,28 @@
+@use '../partials/colors';
+@use '../partials/fonts';
+@use '../partials/mixins';
+
+nav {
+    @include mixins.flex(row, space-between);
+    @include mixins.section-padding;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    .header-icon {
+        font-size: 2.5em;
+        transform: scaleX(-1);
+        color: colors.$main-pink;
+    }
+    ul {
+        @include mixins.flex;
+        li {
+            list-style: none;
+            padding-left: 4em;
+            a {
+                @include fonts.page-font-bold;
+                text-decoration: none;
+                color: colors.$dark-text;
+            }
+        }
+    }
+}

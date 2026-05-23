@@ -1,2 +1,13 @@
 $header-font: 'Rammetto One';
 $page-font: 'Open Sans';
+
+@mixin page-font-bold {
+    font-family: $page-font;
+    font-weight: bold;
+}
+
+@mixin page-font-bold-italics {
+    font-family: $page-font;
+    font-weight: bold;
+    font-style: italic;
+}
