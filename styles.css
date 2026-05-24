@@ -89,52 +89,25 @@
   justify-content: flex-start;
   width: 100%;
 }
-.menu {
-  /*Hide the checkbox input but keeping it accessible */
+.menu__category-wrapper {
+  width: 100%;
 }
-.menu__category-toggle {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+.menu__category-wrapper summary {
+  color: #404040;
 }
-.menu__category-toggle-heading {
+.menu__category-wrapper-header {
+  display: list-item;
   font-family: "Open Sans";
   font-weight: bold;
-  font-size: 1.5em;
-}
-.menu__category-label {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   background-color: #EBC9C4;
   color: #404040;
+  font-size: 1.5em;
   align-items: center;
   gap: 1.5em;
   padding: 0.5em 1em;
   cursor: pointer;
 }
-.menu__category-toggle-icon {
-  font-size: 2em;
-  line-height: 0.5;
-}
-.menu__category-toggle-icon-right {
-  display: flex;
-  transform: scale(1.75, 1);
-}
-.menu__category-toggle-icon-right--dropdown-open, .menu__category-toggle:checked ~ .menu__category-label .menu__category-toggle-icon-right {
-  display: none;
-}
-.menu__category-toggle-icon-down {
-  display: none;
-  transform: scale(1, 1.75);
-}
-.menu__category-toggle-icon-down--dropdown-open, .menu__category-toggle:checked ~ .menu__category-label .menu__category-toggle-icon-down {
-  display: flex;
-}
 .menu__grid {
-  display: none;
-}
-.menu__grid--open, .menu__category-toggle:checked ~ .menu__grid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

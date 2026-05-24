@@ -17,65 +17,29 @@
         @include mixins.flex(column);
         width: 100%;
     }
-    /*Hide the checkbox input but keeping it accessible */
-    &__category-toggle {
-        position: absolute;
-        opacity: 0;
-        pointer-events: none;
-
-        &:checked ~ .menu__category-label .menu__category-toggle-icon-right {
-            @extend .menu__category-toggle-icon-right--dropdown-open;
-        }
-
-        &:checked ~ .menu__category-label .menu__category-toggle-icon-down {
-            @extend .menu__category-toggle-icon-down--dropdown-open;
-        }
-
-        &:checked ~ .menu__grid {
-            @extend .menu__grid--open;
+    &__category-wrapper {
+        width: 100%;
+        & summary {
+            color: colors.$text-dark;
         }
     }
-    &__category-toggle-heading {
+    &__category-wrapper-header {
+        display: list-item;
         @include fonts.page-font-bold;
-        font-size: 1.5em; 
-    }
-    &__category-label {
-        @include mixins.flex;
         @include mixins.colors(colors.$pale-pink, colors.$text-dark);
+        font-size: 1.5em; 
         align-items: center;
         gap: 1.5em;
         padding: 0.5em 1em;
         cursor: pointer;
     }
-    &__category-toggle-icon {
-        font-size: 2em;
-        line-height: 0.5;
-        &-right {
-            display: flex;
-            transform: scale(1.75, 1);
-            &--dropdown-open {
-                display: none;
-            }
-        }
-        &-down {
-            display: none;
-            transform: scale(1, 1.75);
-            &--dropdown-open {
-                display: flex;
-            }
-        }
-    }
     &__grid {
-        display: none;
-
-        &--open {
-            @include mixins.flex(row, space-between);
-            flex-wrap: wrap;
-            gap: 1.25em;
-            margin-top: 1.25em;
-            margin-bottom: 1.25em;
-            width: 100%;
-        }
+        @include mixins.flex(row, space-between);
+        flex-wrap: wrap;
+        gap: 1.25em;
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+        width: 100%;
     }
     &__card {
         @include mixins.flex(column);
