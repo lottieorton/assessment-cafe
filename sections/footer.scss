@@ -1,0 +1,27 @@
+@use '../partials/colors';
+@use '../partials/fonts';
+@use '../partials/mixins';
+
+.footer {
+    @include mixins.flex(row, space-between);
+    @include mixins.section-padding;
+    @include mixins.colors(colors.$footer-green, colors.$text-light);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    &__copyright-info {
+        @include mixins.flex(row);
+        align-items: center;
+        gap: 0.5em;
+    }
+    &__copyright-icon {
+        font-size: 2em;
+        transform: scaleX(-1);
+    }
+    &__copyright-text {
+        font-family: fonts.$page-font;
+        font-size: 1.1em;
+    }
+    &__social-icon {
+        font-size: 2.5em;
+    }
+}

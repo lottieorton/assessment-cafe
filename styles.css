@@ -252,6 +252,36 @@
   font-family: "Open Sans";
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 6em;
+  padding-right: 6em;
+  background-color: #82A289;
+  color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.footer__copyright-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.footer__copyright-icon {
+  font-size: 2em;
+  transform: scaleX(-1);
+}
+.footer__copyright-text {
+  font-family: "Open Sans";
+  font-size: 1.1em;
+}
+.footer__social-icon {
+  font-size: 2.5em;
+}
+
 * {
   margin: 0;
 }
