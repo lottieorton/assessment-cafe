@@ -12,31 +12,77 @@
     &__heading {
         @include mixins.section-header;
         color: colors.$bright-pink;
-        &--sm {
-            @include mixins.colors(colors.$pale-pink, colors.$text-dark);
-            @include fonts.page-font-bold;
-            font-size: 1.5em;
-            padding: 0.5em;
-        }
     }
     &__category {
         @include mixins.flex(column);
         width: 100%;
     }
-    &__grid {
-        @include mixins.flex(row, space-between);
-        flex-wrap: wrap;
+    /*Hide the checkbox input but keeping it accessible */
+    &__category-toggle {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+
+        &:checked ~ .menu__category-label .menu__category-toggle-icon-right {
+            @extend .menu__category-toggle-icon-right--dropdown-open;
+        }
+
+        &:checked ~ .menu__category-label .menu__category-toggle-icon-down {
+            @extend .menu__category-toggle-icon-down--dropdown-open;
+        }
+
+        &:checked ~ .menu__grid {
+            @extend .menu__grid--open;
+        }
+    }
+    &__category-toggle-heading {
+        @include fonts.page-font-bold;
+        font-size: 1.5em; 
+    }
+    &__category-label {
+        @include mixins.flex;
+        @include mixins.colors(colors.$pale-pink, colors.$text-dark);
+        align-items: center;
         gap: 1.5em;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-        width: 100%;
+        padding: 0.5em 1em;
+        cursor: pointer;
+    }
+    &__category-toggle-icon {
+        font-size: 2em;
+        line-height: 0.5;
+        &-right {
+            display: flex;
+            transform: scale(1.75, 1);
+            &--dropdown-open {
+                display: none;
+            }
+        }
+        &-down {
+            display: none;
+            transform: scale(1, 1.75);
+            &--dropdown-open {
+                display: flex;
+            }
+        }
+    }
+    &__grid {
+        display: none;
+
+        &--open {
+            @include mixins.flex(row, space-between);
+            flex-wrap: wrap;
+            gap: 1.25em;
+            margin-top: 1.25em;
+            margin-bottom: 1.25em;
+            width: 100%;
+        }
     }
     &__card {
         @include mixins.flex(column);
         box-sizing: border-box;
         align-items: center;
-        padding: 1.5em;
-        width: calc((100% - 3em) / 3);
+        padding: 1.25em;
+        width: calc((100% - 2.5em) / 3);
         @include mixins.colors(colors.$pale-pink, colors.$text-dark);
         gap: 1em;
     }

@@ -34,7 +34,12 @@
         <section class="menu">
             <h2 class="menu__heading">Our Menu</h2>
             <div class="menu__category">
-                <h3 class="menu__heading--sm">Food</h3>
+                <input type="checkbox" id="menu-toggle-food" class="menu__category-toggle" />
+                <label for="menu-toggle-food" class="menu__category-label" aria-expanded="false" aria-controls="nav-links" aria-label="Open Food Menu">
+                    <span class="menu__category-toggle-icon menu__category-toggle-icon-down">&#9662;</span>
+                    <span class="menu__category-toggle-icon menu__category-toggle-icon-right">&#9656;</span>
+                    <span class="menu__category-toggle-heading">Food</span>
+                </label>
                 <div class="menu__grid">
                     <article class="menu__card">
                         <img src="./assets/vanilla_cake.jpg" alt="Chocolate cupcake" class="menu__card-image" />
@@ -75,7 +80,7 @@
                         <h4 class="menu__card-title">Vanilla Cake</h4>
                         <div class="menu__card-dietary-container">
                             <div class="menu__card-dietary-info">
-                                <i class="fa-solid fa-egg dietary-icon menu__card-dietary-icon"></i>
+                                <i class="fa-solid fa-egg menu__card-dietary-icon"></i>
                                 <p class="menu__card-dietary-label">Contains Eggs</p>
                             </div>
                         </div>
@@ -85,11 +90,11 @@
                         <h4 class="menu__card-title">Cheesecake</h4>
                         <div class="menu__card-dietary-container">
                             <div class="menu__card-dietary-info">
-                                <i class="fa-solid fa-egg dietary-icon menu__card-dietary-icon"></i>
+                                <i class="fa-solid fa-egg menu__card-dietary-icon"></i>
                                 <p class="menu__card-dietary-label">Contains Eggs</p>
                             </div>
                             <div class="menu__card-dietary-info">
-                                <i class="fa-solid fa-cow dietary-icon menu__card-dietary-icon"></i>
+                                <i class="fa-solid fa-cow menu__card-dietary-icon"></i>
                                 <p class="menu__card-dietary-label">Contains Dairy</p>
                             </div>
                         </div>
@@ -97,14 +102,19 @@
                 </div>
             </div>
             <div class="menu__category">
-                <h3 class="menu__heading--sm">Drinks</h3>
+                <input type="checkbox" id="menu-toggle-drinks" class="menu__category-toggle" />
+                <label for="menu-toggle-drinks" class="menu__category-label" aria-expanded="false" aria-controls="nav-links" aria-label="Open Drinks Menu">
+                    <span class="menu__category-toggle-icon menu__category-toggle-icon-down">&#9662;</span>
+                    <span class="menu__category-toggle-icon menu__category-toggle-icon-right">&#9656;</span>
+                    <span class="menu__category-toggle-heading">Drinks</span>
+                </label>
                 <div class="menu__grid">
                     <article class="menu__card">
                         <img src="./assets/coffee.jpg" alt="Flat white" class="menu__card-image" />
                         <h4 class="menu__card-title">Flat White</h4>
                         <div class="menu__card-dietary-container">
                             <div class="menu__card-dietary-info">
-                                <i class="fa-solid fa-leaf dietary-icon menu__card-dietary-icon"></i>
+                                <i class="fa-solid fa-leaf menu__card-dietary-icon"></i>
                                 <p class="menu__card-dietary-label">Vegan Options Available</p>
                             </div>
                         </div>
@@ -114,7 +124,7 @@
                         <h4 class="menu__card-title">Green Smoothie</h4>
                         <div class="menu__card-dietary-container">
                             <div class="menu__card-dietary-info">
-                                <i class="fa-solid fa-leaf dietary-icon menu__card-dietary-icon"></i>
+                                <i class="fa-solid fa-leaf menu__card-dietary-icon"></i>
                                 <p class="menu__card-dietary-label">Vegan Options Available</p>
                             </div>
                         </div>
@@ -124,11 +134,11 @@
                         <h4 class="menu__card-title">Peanut Butter Smoothie</h4>
                         <div class="menu__card-dietary-container">
                             <div class="menu__card-dietary-info">
-                                <i class="fa-solid fa-leaf dietary-icon menu__card-dietary-icon"></i>
+                                <i class="fa-solid fa-leaf menu__card-dietary-icon"></i>
                                 <p class="menu__card-dietary-label">Vegan Options Available</p>
                             </div>
                             <div class="menu__card-dietary-info">
-                                <i class="fa-solid fa-hand-dots dietary-icon menu__card-dietary-icon"></i>
+                                <i class="fa-solid fa-hand-dots menu__card-dietary-icon"></i>
                                 <p class="menu__card-dietary-label">Contains Nuts</p>
                             </div>
                         </div>
