@@ -1,0 +1,34 @@
+@use '../partials/colors';
+@use '../partials/fonts';
+@use '../partials/mixins';
+
+header {
+    @include mixins.flex;
+    width: 100%;
+    
+    .header-info {
+        @include mixins.flex(column, center);
+        @include mixins.section-padding;
+        @include mixins.colors(colors.$main-green, colors.$text-light);
+        flex-grow: 1;
+        align-items: flex-start;
+        h1 {
+            @include mixins.section-header;
+            margin-bottom: 0.25em;
+        }
+        p {
+            font-family: fonts.$page-font;
+            font-size: 1.5em;
+            margin-bottom: 1.5em;
+        }
+        a {
+            @include fonts.page-font-bold;
+            font-size: 1.5em;
+            text-decoration: none;
+            color: colors.$text-light;
+            padding: 0.5em;
+            width: auto;
+            border: 3px solid colors.$text-light;
+        }
+    }
+}

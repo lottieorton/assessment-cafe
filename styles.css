@@ -2,8 +2,8 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 6em;
+  padding-right: 6em;
   align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -27,6 +27,48 @@ nav ul li a {
   font-weight: bold;
   text-decoration: none;
   color: #404040;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+header .header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6em;
+  padding-right: 6em;
+  background-color: #689572;
+  color: white;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+header .header-info h1 {
+  font-family: "Rammetto One";
+  font-size: 3em;
+  margin-bottom: 0.25em;
+}
+header .header-info p {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+header .header-info a {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: white;
+  padding: 0.5em;
+  width: auto;
+  border: 3px solid white;
+}
+
+* {
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

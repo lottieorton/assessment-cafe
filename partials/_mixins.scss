@@ -1,3 +1,5 @@
+@use './fonts';
+
 @mixin flex($direction: row, $justify: flex-start) {
     display: flex;
     flex-direction: $direction;
@@ -5,6 +7,16 @@
 }
 
 @mixin section-padding {
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+@mixin colors($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+@mixin section-header {
+    font-family: fonts.$header-font;
+    font-size: 3em;
 }

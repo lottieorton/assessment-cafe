@@ -11,7 +11,7 @@ nav {
     .header-icon {
         font-size: 2.5em;
         transform: scaleX(-1);
-        color: colors.$main-pink;
+        color: colors.$bright-pink;
     }
     ul {
         @include mixins.flex;
@@ -21,7 +21,7 @@ nav {
             a {
                 @include fonts.page-font-bold;
                 text-decoration: none;
-                color: colors.$dark-text;
+                color: colors.$text-dark;
             }
         }
     }

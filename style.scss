@@ -2,3 +2,8 @@
 @use './partials/fonts';
 @use './partials/mixins';
 @use './sections/nav.scss';
+@use './sections/header.scss';
+
+* {
+    margin: 0;
+}
