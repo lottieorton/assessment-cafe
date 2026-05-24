@@ -1,4 +1,4 @@
-nav {
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,34 +8,34 @@ nav {
   padding-top: 1em;
   padding-bottom: 1em;
 }
-nav .header-icon {
+.navbar__icon {
   font-size: 2.5em;
   transform: scaleX(-1);
   color: #FAA196;
 }
-nav ul {
+.navbar__list {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-nav ul li {
+.navbar__item {
   list-style: none;
   padding-left: 4em;
 }
-nav ul li a {
+.navbar__link {
   font-family: "Open Sans";
   font-weight: bold;
   text-decoration: none;
   color: #404040;
 }
 
-header {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
 }
-header .header-info {
+.header__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,17 +46,17 @@ header .header-info {
   flex-grow: 1;
   align-items: flex-start;
 }
-header .header-info h1 {
+.header__main-heading {
   font-family: "Rammetto One";
   font-size: 3em;
   margin-bottom: 0.25em;
 }
-header .header-info p {
+.header__text {
   font-family: "Open Sans";
   font-size: 1.5em;
   margin-bottom: 1.5em;
 }
-header .header-info a {
+.header__btn {
   font-family: "Open Sans";
   font-weight: bold;
   font-size: 1.5em;

@@ -2,27 +2,27 @@
 @use '../partials/fonts';
 @use '../partials/mixins';
 
-nav {
+.navbar {
     @include mixins.flex(row, space-between);
     @include mixins.section-padding;
     align-items: center;
     padding-top: 1em;
     padding-bottom: 1em;
-    .header-icon {
+    &__icon {
         font-size: 2.5em;
         transform: scaleX(-1);
         color: colors.$bright-pink;
     }
-    ul {
+    &__list {
         @include mixins.flex;
-        li {
-            list-style: none;
-            padding-left: 4em;
-            a {
-                @include fonts.page-font-bold;
-                text-decoration: none;
-                color: colors.$text-dark;
-            }
-        }
+    }
+    &__item {
+        list-style: none;
+        padding-left: 4em;
+    }
+    &__link {
+        @include fonts.page-font-bold;
+        text-decoration: none;
+        color: colors.$text-dark;
     }
 }
