@@ -1,0 +1,59 @@
+@use '../partials/colors';
+@use '../partials/fonts';
+@use '../partials/mixins';
+
+@mixin quotation-mark($align) {
+    font-size: 1.5em;
+    align-self: $align;
+}
+
+.reviews {
+    @include mixins.flex(column);
+    @include mixins.section-padding;
+    align-items: center;
+    background-color: colors.$bright-pink;
+    gap: 0.75em;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    &__heading {
+        @include mixins.section-header;
+        color: colors.$text-light;
+    }
+    &__container {
+        @include mixins.flex(row, center);
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1.5em;   
+    }
+    &__card {
+        @include mixins.flex(column);
+        box-sizing: border-box;
+        padding: 1.5em 2em;
+        width: calc((100% - 4em) / 2);
+        gap: 1.5em;
+        border: 3px solid colors.$text-light;
+        color: colors.$text-dark;
+    }
+    &__quote {
+       @include mixins.flex(row, space-between);
+       @include fonts.page-font-bold-italics;
+       width: 100%;
+       gap: 0.75em;
+    }
+    &__quote-left-icon {
+        @include quotation-mark(flex-start);
+    }
+    &__quote-right-icon {
+        @include quotation-mark(flex-end);
+    }
+    &__quote-text {
+        font-size: 1.2em;
+        align-self: center;
+        text-align: center;
+    }
+    &__quote-info {
+       @include mixins.flex(row, space-between);
+       width: 100%;
+       font-family: fonts.$page-font;
+    }
+} 

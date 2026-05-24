@@ -185,6 +185,73 @@
   font-size: 0.85em;
 }
 
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 6em;
+  padding-right: 6em;
+  align-items: center;
+  background-color: #FAA196;
+  gap: 0.75em;
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+}
+.reviews__heading {
+  font-family: "Rammetto One";
+  font-size: 3em;
+  color: white;
+}
+.reviews__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1.5em;
+}
+.reviews__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 1.5em 2em;
+  width: calc((100% - 4em) / 2);
+  gap: 1.5em;
+  border: 3px solid white;
+  color: #404040;
+}
+.reviews__quote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: italic;
+  width: 100%;
+  gap: 0.75em;
+}
+.reviews__quote-left-icon {
+  font-size: 1.5em;
+  align-self: flex-start;
+}
+.reviews__quote-right-icon {
+  font-size: 1.5em;
+  align-self: flex-end;
+}
+.reviews__quote-text {
+  font-size: 1.2em;
+  align-self: center;
+  text-align: center;
+}
+.reviews__quote-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Open Sans";
+}
+
 * {
   margin: 0;
 }
