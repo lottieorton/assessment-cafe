@@ -32,90 +32,106 @@
     </header>
     <main>
         <section class="menu">
-            <h2 class="large-heading">Our Menu</h2>
-            <div class="menu-category">
-                <h3>Food</h3>
-                <div class="menu-grid">
-                    <article class="card">
-                        <img src="./assets/vanilla_cake.jpg" alt="Chocolate cupcake">
-                        <h4 class="menu-item-name">Chocolate Cupcake</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-leaf dietary-icon"></i>
-                            <p class="dietary-label">Vegan</p>
+            <h2 class="menu__heading">Our Menu</h2>
+            <div class="menu__category">
+                <h3 class="menu__heading--sm">Food</h3>
+                <div class="menu__grid">
+                    <article class="menu__card">
+                        <img src="./assets/vanilla_cake.jpg" alt="Chocolate cupcake" class="menu__card-image" />
+                        <h4 class="menu__card-title">Chocolate Cupcake</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-leaf menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Vegan</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="card">
-                        <img src="./assets/donuts.jpg" alt="Donut">
-                        <h4 class="menu-item-name">Donuts</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-wheat-awn-circle-exclamation dietary-icon"></i>
-                            <p class="dietary-label">Gluten Free</p>
+                    <article class="menu__card">
+                        <img src="./assets/donuts.jpg" alt="Donut" class="menu__card-image" />
+                        <h4 class="menu__card-title">Donuts</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-wheat-awn-circle-exclamation menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Gluten Free</p>
+                            </div>
                         </div>
                     </article> 
-                    <article class="card">
-                        <img src="./assets/raspberry_cupcake.jpg" alt="Raspberry cupcake" />
-                        <h4 class="menu-item-name">Raspberry Cupcake</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-leaf dietary-icon"></i>
-                            <p class="dietary-label">Vegan</p>
-                        </div>
-                        <div class="dietary">
-                            <i class="fa-solid fa-wheat-awn-circle-exclamation dietary-icon"></i>
-                            <p class="dietary-label">Gluten Free</p>
+                    <article class="menu__card">
+                        <img src="./assets/raspberry_cupcake.jpg" alt="Raspberry cupcake" class="menu__card-image" />
+                        <h4 class="menu__card-title">Raspberry Cupcake</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-leaf menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Vegan</p>
+                            </div>
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-wheat-awn-circle-exclamation menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Gluten Free</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="card">
-                        <img src="./assets/vanilla_cake.jpg" alt="Vanilla cake">
-                        <h4 class="menu-item-name">Vanilla Cake</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-egg dietary-icon"></i>
-                            <p class="dietary-label">Contains Eggs</p>
+                    <article class="menu__card">
+                        <img src="./assets/vanilla_cake.jpg" alt="Vanilla cake" class="menu__card-image" />
+                        <h4 class="menu__card-title">Vanilla Cake</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-egg dietary-icon menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Contains Eggs</p>
+                            </div>
                         </div>
                     </article>  
-                    <article class="card">
-                        <img src="./assets/cheesecake.jpg" alt="Cheesecake">
-                        <h4 class="menu-item-name">Cheesecake</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-egg dietary-icon"></i>
-                            <p class="dietary-label">Contains Eggs</p>
-                        </div>
-                        <div class="dietary">
-                            <i class="fa-solid fa-cow dietary-icon"></i>
-                            <p class="dietary-label">Contains Dairy</p>
+                    <article class="menu__card">
+                        <img src="./assets/cheesecake.jpg" alt="Cheesecake" class="menu__card-image" />
+                        <h4 class="menu__card-title">Cheesecake</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-egg dietary-icon menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Contains Eggs</p>
+                            </div>
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-cow dietary-icon menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Contains Dairy</p>
+                            </div>
                         </div>
                     </article>
                 </div>
             </div>
-            <div class="menu-category">
-                <h3>Drinks</h3>
-                <div class="menu-grid">
-                    <article class="card">
-                        <img src="./assets/coffee.jpg" alt="Flat white">
-                        <h4 class="menu-item-name">Flat White</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-leaf dietary-icon"></i>
-                            <p class="dietary-label">Vegan Options Available</p>
-                        </div> 
-                    </article>
-                    <article class="card">
-                        <img src="./assets/green_smoothie.jpg" alt="Green smoothie">
-                        <h4 class="menu-item-name">Green Smoothie</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-leaf dietary-icon"></i>
-                            <p class="dietary-label">Vegan Options Available</p>
-                        </div> 
-                    </article>
-                    <article class="card">
-                        <img src="./assets/peanut_smoothie.jpg" alt="Peanut butter smoothie">
-                        <h4 class="menu-item-name">Peanut Butter Smoothie</h4>
-                        <div class="dietary">
-                            <i class="fa-solid fa-leaf dietary-icon"></i>
-                            <p class="dietary-label">Vegan Options Available</p>
+            <div class="menu__category">
+                <h3 class="menu__heading--sm">Drinks</h3>
+                <div class="menu__grid">
+                    <article class="menu__card">
+                        <img src="./assets/coffee.jpg" alt="Flat white" class="menu__card-image" />
+                        <h4 class="menu__card-title">Flat White</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-leaf dietary-icon menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Vegan Options Available</p>
+                            </div>
                         </div>
-                        <div class="dietary">
-                            <i class="fa-solid fa-hand-dots dietary-icon"></i>
-                            <p class="dietary-label">Contains Nuts</p>
-                        </div> 
+                    </article>
+                    <article class="menu__card">
+                        <img src="./assets/green_smoothie.jpg" alt="Green smoothie" class="menu__card-image" />
+                        <h4 class="menu__card-title">Green Smoothie</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-leaf dietary-icon menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Vegan Options Available</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="menu__card">
+                        <img src="./assets/peanut_smoothie.jpg" alt="Peanut butter smoothie" class="menu__card-image" />
+                        <h4 class="menu__card-title">Peanut Butter Smoothie</h4>
+                        <div class="menu__card-dietary-container">
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-leaf dietary-icon menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Vegan Options Available</p>
+                            </div>
+                            <div class="menu__card-dietary-info">
+                                <i class="fa-solid fa-hand-dots dietary-icon menu__card-dietary-icon"></i>
+                                <p class="menu__card-dietary-label">Contains Nuts</p>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </div>

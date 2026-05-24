@@ -1,0 +1,68 @@
+@use '../partials/colors';
+@use '../partials/fonts';
+@use '../partials/mixins';
+
+.menu {
+    @include mixins.flex(column);
+    @include mixins.section-padding;
+    align-items: center;
+    gap: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    &__heading {
+        @include mixins.section-header;
+        color: colors.$bright-pink;
+        &--sm {
+            @include mixins.colors(colors.$pale-pink, colors.$text-dark);
+            @include fonts.page-font-bold;
+            font-size: 1.5em;
+            padding: 0.5em;
+        }
+    }
+    &__category {
+        @include mixins.flex(column);
+        width: 100%;
+    }
+    &__grid {
+        @include mixins.flex(row, space-between);
+        flex-wrap: wrap;
+        gap: 1.5em;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        width: 100%;
+    }
+    &__card {
+        @include mixins.flex(column);
+        box-sizing: border-box;
+        align-items: center;
+        padding: 1.5em;
+        width: calc((100% - 3em) / 3);
+        @include mixins.colors(colors.$pale-pink, colors.$text-dark);
+        gap: 1em;
+    }
+    &__card-image {
+        width:100%;
+        height: auto;
+    }
+    &__card-title {
+        font-family: fonts.$page-font;
+        font-size: 1.5em;
+    }
+    &__card-dietary-container {
+        @include mixins.flex(row, center);
+        flex-wrap: wrap;
+        gap: 1.5em;
+    }
+    &__card-dietary-info {
+        @include mixins.flex;
+        gap: 0.25em;
+    }
+    &__card-dietary-icon {
+        color: colors.$main-green;
+    }
+    &__card-dietary-label {
+        font-family: fonts.$page-font;
+        font-size: 0.85em;
+    }
+}            
+                    
