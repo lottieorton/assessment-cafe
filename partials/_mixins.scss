@@ -26,11 +26,6 @@
     font-size: $font-size;
 }
 
-@mixin mirror-icon ($size) {
-    font-size: $size;
-    transform: scaleX(-1);
-}
-
 @mixin button-styling ($color, $font-size: 1.5em, $padding: 0.5em, $border-weight: 3px) {
     @include fonts.page-font-bold;
     font-size: $font-size;

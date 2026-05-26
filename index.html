@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <i class="fa-solid fa-mug-hot navbar__icon"></i>
+        <i class="fa-solid fa-mug-hot navbar__icon navbar__icon--flipped"></i>
         <ul class="navbar__list">
             <li class="navbar__item">
                 <a href="#" class="navbar__link">ABOUT</a>
@@ -36,7 +36,7 @@
             <div class="menu__category">
                 <details class="menu__category-wrapper">
                     <summary class="menu__category-wrapper-header">Food</summary>
-                    <div class="menu__grid">
+                    <div class="menu__grid menu__grid--columns-3">
                         <article class="menu__card">
                             <img src="./assets/vanilla_cake.jpg" alt="Chocolate cupcake" class="menu__card-image" />
                             <h4 class="menu__card-title">Chocolate Cupcake</h4>
@@ -100,8 +100,8 @@
             </div>
             <div class="menu__category">
                 <details class="menu__category-wrapper">
-                    <summary class="menu__category-wrapper-header">Drink</summary>
-                    <div class="menu__grid">
+                    <summary class="menu__category-wrapper-header">Drinks</summary>
+                    <div class="menu__grid menu__grid--columns-3">
                         <article class="menu__card">
                             <img src="./assets/coffee.jpg" alt="Flat white" class="menu__card-image" />
                             <h4 class="menu__card-title">Flat White</h4>
@@ -142,7 +142,7 @@
         </section>
         <section class="reviews" id="reviews">
             <h2 class="reviews__heading">Reviews</h2>
-            <div class="reviews__container">
+            <div class="reviews__grid reviews__grid--columns-2">
                 <article class="reviews__card">
                     <div class="reviews__quote">
                         <i class="fa-solid fa-quote-left reviews__quote-left-icon"></i>
@@ -181,7 +181,7 @@
     </main>
     <footer class="footer">
         <div class="footer__copyright-info">
-            <i class="fa-solid fa-mug-hot footer__copyright-icon"></i>
+            <i class="fa-solid fa-mug-hot footer__copyright-icon footer__copyright-icon--flipped"></i>
             <p class="footer__copyright-text">Copyright 2024</p>
         </div>
         <i class="fa-brands fa-square-instagram footer__social-icon"></i>

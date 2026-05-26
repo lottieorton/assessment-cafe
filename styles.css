@@ -9,9 +9,11 @@
   padding-bottom: 1em;
 }
 .navbar__icon {
-  font-size: 2.5em;
-  transform: scaleX(-1);
   color: #FAA196;
+  font-size: 2.5em;
+}
+.navbar__icon--flipped {
+  transform: scaleX(-1);
 }
 .navbar__list {
   display: flex;
@@ -113,6 +115,9 @@
   margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
+.menu__grid--columns-3 .menu__card {
+  width: calc((100% - 2.5em) / 3);
+}
 .menu__card {
   display: flex;
   flex-direction: column;
@@ -120,7 +125,6 @@
   box-sizing: border-box;
   align-items: center;
   padding: 1.25em;
-  width: calc((100% - 2.5em) / 3);
   background-color: #EBC9C4;
   color: #404040;
   gap: 1em;
@@ -171,7 +175,7 @@
   font-size: 3em;
   color: white;
 }
-.reviews__container {
+.reviews__grid {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -179,13 +183,15 @@
   width: 100%;
   gap: 1.5em;
 }
+.reviews__grid--columns-2 .reviews__card {
+  width: calc((100% - 4em) / 2);
+}
 .reviews__card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
   padding: 1.5em 2em;
-  width: calc((100% - 4em) / 2);
   gap: 1.5em;
   border: 3px solid white;
   color: #404040;
@@ -241,6 +247,8 @@
 }
 .footer__copyright-icon {
   font-size: 2em;
+}
+.footer__copyright-icon--flipped {
   transform: scaleX(-1);
 }
 .footer__copyright-text {

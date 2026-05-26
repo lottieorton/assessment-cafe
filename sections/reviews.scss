@@ -19,15 +19,19 @@
         @include mixins.section-header;
         color: colors.$text-light;
     }
-    &__container {
+    &__grid {
         @include mixins.flex(row, center);
         @include mixins.grid-styling(1.5em);  
+        &--columns-2 {
+            .reviews__card {
+                width: calc((100% - 4em) / 2);
+            }
+        }
     }
     &__card {
         @include mixins.flex(column);
         box-sizing: border-box;
         padding: 1.5em 2em;
-        width: calc((100% - 4em) / 2);
         gap: 1.5em;
         border: 3px solid colors.$text-light;
         color: colors.$text-dark;

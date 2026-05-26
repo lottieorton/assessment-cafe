@@ -14,7 +14,10 @@
         gap: 0.5em;
     }
     &__copyright-icon {
-        @include mixins.mirror-icon(2em);
+        font-size: 2em;
+        &--flipped {
+            transform: scaleX(-1);
+        }
     }
     &__copyright-text {
         @include mixins.font-styling(fonts.$page-font, 1.1em);

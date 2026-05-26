@@ -34,13 +34,17 @@
         @include mixins.grid-styling(1.25em);
         margin-top: 1.25em;
         margin-bottom: 1.25em;
+        &--columns-3 {
+            .menu__card {
+                width: calc((100% - 2.5em) / 3);
+            }
+        }
     }
     &__card {
         @include mixins.flex(column);
         box-sizing: border-box;
         align-items: center;
         padding: 1.25em;
-        width: calc((100% - 2.5em) / 3);
         @include mixins.colors(colors.$pale-pink, colors.$text-dark);
         gap: 1em;
     }
