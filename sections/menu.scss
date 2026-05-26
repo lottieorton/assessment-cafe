@@ -19,12 +19,8 @@
     }
     &__category-wrapper {
         width: 100%;
-        & summary {
-            color: colors.$text-dark;
-        }
     }
     &__category-wrapper-header {
-        display: list-item;
         @include fonts.page-font-bold;
         @include mixins.colors(colors.$pale-pink, colors.$text-dark);
         font-size: 1.5em; 
@@ -35,11 +31,9 @@
     }
     &__grid {
         @include mixins.flex(row, space-between);
-        flex-wrap: wrap;
-        gap: 1.25em;
+        @include mixins.grid-styling(1.25em);
         margin-top: 1.25em;
         margin-bottom: 1.25em;
-        width: 100%;
     }
     &__card {
         @include mixins.flex(column);
@@ -55,8 +49,7 @@
         height: auto;
     }
     &__card-title {
-        font-family: fonts.$page-font;
-        font-size: 1.5em;
+        @include mixins.font-styling(fonts.$page-font, 1.5em);
     }
     &__card-dietary-container {
         @include mixins.flex(row, center);
@@ -71,8 +64,7 @@
         color: colors.$main-green;
     }
     &__card-dietary-label {
-        font-family: fonts.$page-font;
-        font-size: 0.85em;
+        @include mixins.font-styling(fonts.$page-font, 0.85em);
     }
 }            
                     

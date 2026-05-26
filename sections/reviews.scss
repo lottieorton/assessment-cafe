@@ -21,9 +21,7 @@
     }
     &__container {
         @include mixins.flex(row, center);
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 1.5em;   
+        @include mixins.grid-styling(1.5em);  
     }
     &__card {
         @include mixins.flex(column);

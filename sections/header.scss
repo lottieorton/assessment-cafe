@@ -18,17 +18,10 @@
         margin-bottom: 0.25em;
     }
     &__text {
-        font-family: fonts.$page-font;
-        font-size: 1.5em;
+        @include mixins.font-styling(fonts.$page-font, 1.5em);
         margin-bottom: 1.5em;
     }
     &__btn {
-        @include fonts.page-font-bold;
-        font-size: 1.5em;
-        text-decoration: none;
-        color: colors.$text-light;
-        padding: 0.5em;
-        width: auto;
-        border: 3px solid colors.$text-light;
+        @include mixins.button-styling(colors.$text-light);
     }
 }

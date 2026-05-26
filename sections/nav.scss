@@ -9,9 +9,8 @@
     padding-top: 1em;
     padding-bottom: 1em;
     &__icon {
-        font-size: 2.5em;
-        transform: scaleX(-1);
-        color: colors.$bright-pink;
+        @include mixins.mirror-icon(2.5em);
+        color: colors.$bright-pink;    
     }
     &__list {
         @include mixins.flex;
