@@ -1,0 +1,69 @@
+@use '../partials/mixins';
+@use '../partials/colors';
+@use '../partials/fonts';
+
+.contact {
+    @include mixins.flex(row, space-between);
+    background-color: colors.$bright-pink;
+    align-items: center;
+    @include mixins.section-padding;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    &__heading-container {
+        @include mixins.flex(column);
+        @include mixins.colors(colors.$bright-pink, colors.$text-light);
+        gap: 1.5em;
+        margin-right: 1em;
+    }
+    &__heading {
+        @include mixins.section-header;
+
+    }
+    &__heading-icon {
+        align-self: center;
+        font-size: 3em;
+    }
+    &__form {
+        @include mixins.flex(column);
+        box-sizing: border-box;
+        background-color: colors.$main-green;
+        gap: 1.5em;
+        padding: 4em;
+        border-radius: 1em;
+        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
+        flex-grow: 1;
+        width: 100%;
+        max-width:800px;
+    }
+    &__form-question {
+        @include mixins.flex(row, space-between);
+        flex-wrap: wrap;
+        gap: 0.25em;
+        
+    }
+    &__form-question-label {
+        width: 100%;
+        flex-grow: 1;
+        @include fonts.page-font-bold;
+        font-size: 1.5em;
+        color: colors.$text-light;
+    }
+    &__form-question-input {
+        border: none;
+        border-radius: 2px;
+        height: 1.5em;
+        @include mixins.font-styling(fonts.$page-font, 1.25em);
+        width: 100%;
+        background-color: colors.$text-light;
+        color: colors.$text-dark;
+        &--textarea {
+            height: 5rem;
+        }
+    }
+    &__btn {
+        @include mixins.button-styling(colors.$text-light);
+        background-color: colors.$main-green;
+        margin-top: 1em;
+    }
+
+}
