@@ -6,9 +6,9 @@
     justify-content: $justify;
 }
 
-@mixin section-padding {
-    padding-left: 6em;
-    padding-right: 6em;
+@mixin section-padding($padding) {
+    padding-left: $padding;
+    padding-right: $padding;
 }
 
 @mixin colors($bg-color, $text-color) {
@@ -34,6 +34,7 @@
     padding: $padding;
     width: auto;
     border: $border-weight solid $color;
+    cursor: pointer;
 }
 
 @mixin grid-styling ($gap) {

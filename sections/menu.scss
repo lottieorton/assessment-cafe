@@ -1,10 +1,12 @@
 @use '../partials/colors';
 @use '../partials/fonts';
 @use '../partials/mixins';
+@use '../partials/media_queries' as q;
+@use '../partials/sizes';
 
 .menu {
     @include mixins.flex(column);
-    @include mixins.section-padding;
+    @include mixins.section-padding(sizes.$large-padding);
     align-items: center;
     gap: 2em;
     padding-top: 3em;
@@ -69,6 +71,10 @@
     }
     &__card-dietary-label {
         @include mixins.font-styling(fonts.$page-font, 0.85em);
+    }
+
+    @include q.laptop {
+        @include mixins.section-padding(sizes.$laptop-padding);
     }
 }            
                     

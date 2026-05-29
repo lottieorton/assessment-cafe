@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left: 6rem;
+  padding-right: 6rem;
   align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -30,6 +30,12 @@
   text-decoration: none;
   color: #404040;
 }
+@media screen and (max-width: 1081px) {
+  .navbar {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
 
 .header {
   display: flex;
@@ -41,12 +47,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left: 6rem;
+  padding-right: 6rem;
   background-color: #689572;
   color: white;
-  flex-grow: 1;
   align-items: flex-start;
+  flex: 1 1 100%;
 }
 .header__main-heading {
   font-family: "Rammetto One";
@@ -67,14 +73,38 @@
   padding: 0.5em;
   width: auto;
   border: 3px solid white;
+  cursor: pointer;
+}
+.header__image {
+  flex: 1 1 50%;
+  width: 100%;
+  object-fit: cover;
+  max-height: 100vh;
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .header__info {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 1081px) {
+  .header__info {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left: 6rem;
+  padding-right: 6rem;
   align-items: center;
   gap: 2em;
   padding-top: 3em;
@@ -157,13 +187,19 @@
   font-family: "Open Sans";
   font-size: 0.85em;
 }
+@media screen and (max-width: 1081px) {
+  .menu {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
 
 .reviews {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left: 6rem;
+  padding-right: 6rem;
   align-items: center;
   background-color: #FAA196;
   gap: 0.75em;
@@ -184,7 +220,7 @@
   gap: 1.5em;
 }
 .reviews__grid--columns-2 .reviews__card {
-  width: calc((100% - 4em) / 2);
+  width: calc((100% - 1.5em) / 2);
 }
 .reviews__card {
   display: flex;
@@ -226,13 +262,19 @@
   width: 100%;
   font-family: "Open Sans";
 }
+@media screen and (max-width: 1081px) {
+  .reviews {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
 
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left: 6rem;
+  padding-right: 6rem;
   background-color: #82A289;
   color: white;
   padding-top: 2em;
@@ -257,6 +299,106 @@
 }
 .footer__social-icon {
   font-size: 2.5em;
+}
+@media screen and (max-width: 1081px) {
+  .footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  background-color: #FAA196;
+  align-items: center;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  gap: 6em;
+}
+.contact__heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #FAA196;
+  color: white;
+  gap: 1.5em;
+  margin-right: 1em;
+}
+.contact__heading {
+  font-family: "Rammetto One";
+  font-size: 3em;
+}
+.contact__heading-icon {
+  align-self: center;
+  font-size: 3em;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background-color: #689572;
+  gap: 1.5em;
+  padding: 4em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
+  flex-grow: 1;
+  width: 100%;
+  max-width: 800px;
+}
+.contact__form-question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
+.contact__form-question-label {
+  width: 100%;
+  flex-grow: 1;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.5em;
+  color: white;
+}
+.contact__form-question-input {
+  border: none;
+  border-radius: 2px;
+  height: 1.5em;
+  font-family: "Open Sans";
+  font-size: 1.25em;
+  width: 100%;
+  background-color: white;
+  color: #404040;
+}
+.contact__form-question-input--textarea {
+  height: 5rem;
+}
+.contact__btn {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  width: auto;
+  border: 3px solid white;
+  cursor: pointer;
+  background-color: #689572;
+  margin-top: 1em;
+}
+@media screen and (max-width: 1081px) {
+  .contact {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .contact__form {
+    padding: 3em;
+  }
 }
 
 * {

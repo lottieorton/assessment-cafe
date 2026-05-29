@@ -1,14 +1,17 @@
 @use '../partials/mixins';
 @use '../partials/colors';
 @use '../partials/fonts';
+@use '../partials/sizes';
+@use '../partials/media_queries' as q;
 
 .contact {
     @include mixins.flex(row, space-between);
+    @include mixins.section-padding(sizes.$large-padding);
     background-color: colors.$bright-pink;
     align-items: center;
-    @include mixins.section-padding;
     padding-top: 4em;
     padding-bottom: 4em;
+    gap: 6em;
     &__heading-container {
         @include mixins.flex(column);
         @include mixins.colors(colors.$bright-pink, colors.$text-light);
@@ -66,4 +69,10 @@
         margin-top: 1em;
     }
 
+    @include q.laptop {
+        @include mixins.section-padding(sizes.$laptop-padding);
+        &__form {
+            padding: 3em;
+        }
+    }
 }
