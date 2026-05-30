@@ -26,7 +26,6 @@
     }
     &__form {
         @include mixins.flex(column);
-        box-sizing: border-box;
         background-color: colors.$main-green;
         gap: 1.5em;
         padding: 4em;
@@ -34,7 +33,7 @@
         box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
         flex-grow: 1;
         width: 100%;
-        max-width:800px;
+        max-width: 800px;
     }
     &__form-question {
         @include mixins.flex(row, space-between);
@@ -46,7 +45,7 @@
         width: 100%;
         flex-grow: 1;
         @include fonts.page-font-bold;
-        font-size: 1.5em;
+        font-size: sizes.$main-font-size-large;
         color: colors.$text-light;
     }
     &__form-question-input {
@@ -79,17 +78,24 @@
 
     @include q.large-tablet {
         @include mixins.section-padding(sizes.$large-tablet-padding);
-        padding-top: 7.25em;
-        padding-bottom: 7.25em;
+        @include mixins.flex(column);
+        padding-top: 4em;
+        padding-bottom: 4em;
         gap: 3em;
+        &__heading-container {
+            @include mixins.flex(row);
+        }
         &__heading {
             @include mixins.section-header(sizes.$section-header-font-size-large-tablet);
         }
         &__heading-icon {
             font-size: 2.5em;
         }
+        &__form {
+            max-width: none;
+        }
         &__form-question-label {
-            font-size: 1.25em;
+            font-size: sizes.$main-font-size-large-tablet;
         }
         &__form-question-input {
             height: 1.5em;
@@ -99,18 +105,30 @@
             }
         }
         &__btn {
-            @include mixins.button-styling(colors.$text-light, 1.25em);
-            background-color: colors.$main-green;
-            margin-top: 0.85em;
+            @include mixins.button-styling(colors.$text-light, sizes.$main-font-size-large-tablet);
         }
     }
-
-    @include q.tablet {
-        @include mixins.flex(column);
-        padding-top: 4em;
-        padding-bottom: 4em;
-        &__heading-container {
-            @include mixins.flex(row);
+    @include q.large-phone {
+        @include mixins.section-padding(sizes.$large-phone-padding);
+        padding-top: 3em;
+        padding-bottom: 3em;
+        gap: 2em;
+        &__heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-phone);
+        }
+        &__heading-icon {
+            align-self: flex-start;
+            padding-top: 0.25em;
+        }
+        &__form {
+            padding: 2em;
+            gap: 1em;
+        }
+        &__form-question-label {
+            font-size: sizes.$main-font-size-large-phone;
+        }
+        &__btn {
+            @include mixins.button-styling(colors.$text-light, sizes.$main-font-size-large-phone);
         }
     }
 }

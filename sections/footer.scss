@@ -45,4 +45,18 @@
             font-size: 2em;
         }
     }
+    @include q.large-phone {
+        @include mixins.section-padding(sizes.$large-phone-padding);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        &__copyright-icon {
+            font-size: 1.25em;
+        }
+        &__copyright-text {
+            @include mixins.font-styling(fonts.$page-font, 0.85em);
+        }
+        &__social-icon {
+            font-size: 1.5em;
+        }
+    }
 }

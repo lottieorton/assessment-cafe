@@ -32,7 +32,6 @@
     }
     &__card {
         @include mixins.flex(column);
-        box-sizing: border-box;
         padding: 1.5em 2em;
         gap: 1.5em;
         border: 3px solid colors.$text-light;
@@ -92,6 +91,36 @@
         }
         &__quote-info {
             font-size: 0.85em;
+        }
+    }
+    @include q.large-phone {
+        @include mixins.section-padding(sizes.$large-phone-padding);
+        &__heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-phone);
+        }
+        &__grid {
+            gap: 1.25em;
+        }
+        &__card {
+            gap: 1em;
+            padding: 1em 1.5em;
+        }
+        &__quote {
+            gap: 0.25em;
+        }
+        &__quote-icon {
+            &--left {
+                @include quotation-mark(flex-start, 1em);
+            }
+            &--right {
+                @include quotation-mark(flex-end, 1em);
+            }
+        }
+        &__quote-text {
+            font-size: 0.85em;
+        }
+        &__quote-info {
+            font-size: 0.75em;
         }
     }
 } 

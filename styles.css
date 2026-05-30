@@ -15,6 +15,14 @@
 .navbar__icon--flipped {
   transform: scaleX(-1);
 }
+.navbar__list-toggle {
+  display: none;
+}
+.navbar__hamburger {
+  display: none;
+  color: #404040;
+  font-size: 2.5em;
+}
 .navbar__list {
   display: flex;
   flex-direction: row;
@@ -46,6 +54,46 @@
   }
   .navbar__item {
     font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 577px) {
+  .navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .navbar__hamburger {
+    display: block;
+    color: #404040;
+    font-size: 2.5em;
+    cursor: pointer;
+  }
+  .navbar__list-toggle {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .navbar__list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 5em;
+    left: 0;
+    background-color: white;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+  }
+  .navbar__list--open, .navbar__list-toggle:checked ~ .navbar__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .navbar__item {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1em;
   }
 }
 
@@ -126,6 +174,24 @@
     font-size: 1.25em;
   }
 }
+@media screen and (max-width: 577px) {
+  .header__info {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .header__main-heading {
+    font-family: "Rammetto One";
+    font-size: 2em;
+  }
+  .header__text {
+    font-size: 1.1em;
+  }
+  .header__btn {
+    font-size: 1.1em;
+  }
+}
 
 .menu {
   display: flex;
@@ -135,8 +201,8 @@
   padding-right: 6rem;
   align-items: center;
   gap: 2em;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 .menu__heading {
   font-family: "Rammetto One";
@@ -180,7 +246,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-sizing: border-box;
   align-items: center;
   padding: 1.25em;
   background-color: #EBC9C4;
@@ -221,12 +286,16 @@
   .menu {
     padding-left: 4rem;
     padding-right: 4rem;
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 }
 @media screen and (max-width: 1025px) {
   .menu {
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
   }
   .menu__heading {
     font-family: "Rammetto One";
@@ -243,6 +312,34 @@
   }
   .menu__card-dietary-label {
     font-size: 0.75em;
+  }
+}
+@media screen and (max-width: 577px) {
+  .menu {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    gap: 1em;
+  }
+  .menu__heading {
+    font-family: "Rammetto One";
+    font-size: 2em;
+  }
+  .menu__category-wrapper-header {
+    font-size: 1.1em;
+  }
+  .menu__grid--columns-3 .menu__card {
+    width: 100%;
+  }
+  .menu__card {
+    gap: 0.85em;
+  }
+  .menu__card-title {
+    font-size: 1.1em;
+  }
+  .menu__card-dietary-container {
+    gap: 1em;
   }
 }
 
@@ -278,7 +375,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-sizing: border-box;
   padding: 1.5em 2em;
   gap: 1.5em;
   border: 3px solid white;
@@ -347,6 +443,40 @@
     font-size: 0.85em;
   }
 }
+@media screen and (max-width: 577px) {
+  .reviews {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .reviews__heading {
+    font-family: "Rammetto One";
+    font-size: 2em;
+  }
+  .reviews__grid {
+    gap: 1.25em;
+  }
+  .reviews__card {
+    gap: 1em;
+    padding: 1em 1.5em;
+  }
+  .reviews__quote {
+    gap: 0.25em;
+  }
+  .reviews__quote-icon--left {
+    font-size: 1em;
+    align-self: flex-start;
+  }
+  .reviews__quote-icon--right {
+    font-size: 1em;
+    align-self: flex-end;
+  }
+  .reviews__quote-text {
+    font-size: 0.85em;
+  }
+  .reviews__quote-info {
+    font-size: 0.75em;
+  }
+}
 
 .footer {
   display: flex;
@@ -403,6 +533,24 @@
     font-size: 2em;
   }
 }
+@media screen and (max-width: 577px) {
+  .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .footer__copyright-icon {
+    font-size: 1.25em;
+  }
+  .footer__copyright-text {
+    font-family: "Open Sans";
+    font-size: 0.85em;
+  }
+  .footer__social-icon {
+    font-size: 1.5em;
+  }
+}
 
 .contact {
   display: flex;
@@ -436,7 +584,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-sizing: border-box;
   background-color: #689572;
   gap: 1.5em;
   padding: 4em;
@@ -503,9 +650,17 @@
   .contact {
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 7.25em;
-    padding-bottom: 7.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4em;
+    padding-bottom: 4em;
     gap: 3em;
+  }
+  .contact__heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
   .contact__heading {
     font-family: "Rammetto One";
@@ -513,6 +668,9 @@
   }
   .contact__heading-icon {
     font-size: 2.5em;
+  }
+  .contact__form {
+    max-width: none;
   }
   .contact__form-question-label {
     font-size: 1.25em;
@@ -535,27 +693,48 @@
     width: auto;
     border: 3px solid white;
     cursor: pointer;
-    background-color: #689572;
-    margin-top: 0.85em;
   }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 577px) {
   .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    gap: 2em;
   }
-  .contact__heading-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  .contact__heading {
+    font-family: "Rammetto One";
+    font-size: 2em;
+  }
+  .contact__heading-icon {
+    align-self: flex-start;
+    padding-top: 0.25em;
+  }
+  .contact__form {
+    padding: 2em;
+    gap: 1em;
+  }
+  .contact__form-question-label {
+    font-size: 1.1em;
+  }
+  .contact__btn {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    width: auto;
+    border: 3px solid white;
+    cursor: pointer;
   }
 }
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=styles.css.map */

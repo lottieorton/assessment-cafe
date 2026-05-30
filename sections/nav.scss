@@ -17,6 +17,14 @@
             transform: scaleX(-1);
         }
     }
+    &__list-toggle {
+        display: none;
+    }
+    &__hamburger {
+        display:none;
+        color: colors.$text-dark;
+        font-size: 2.5em;
+    }
     &__list {
         @include mixins.flex;
     }
@@ -41,6 +49,44 @@
         }
         &__item {
             font-size: 0.85em
+        }
+    }
+    @include q.large-phone {
+        @include mixins.section-padding(sizes.$large-phone-padding);
+        &__hamburger {
+            display: block;
+            color: colors.$text-dark;
+            font-size: 2.5em;
+            cursor: pointer;
+        }
+        &__list-toggle {
+            display: block;
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            &:checked ~ .navbar__list {
+                @extend .navbar__list--open;
+            }
+        }
+        &__list {
+            display: none;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            top: 5em;
+            left: 0;
+            background-color: colors.$text-light;
+            align-items: center;
+            gap: 1em;
+            padding: 1em;
+            &--open {
+                @include mixins.flex(column);
+            }
+        }    
+        &__item {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1em;
         }
     }
 }

@@ -19,7 +19,7 @@
         margin-bottom: 0.25em;
     }
     &__text {
-        @include mixins.font-styling(fonts.$page-font, 1.5em);
+        @include mixins.font-styling(fonts.$page-font, sizes.$main-font-size-large);
         margin-bottom: 1.5em;
     }
     &__btn {
@@ -53,10 +53,26 @@
             @include mixins.section-header(sizes.$section-header-font-size-large-tablet);
         }
         &__text {
-            font-size: 1.25em;
+            font-size: sizes.$main-font-size-large-tablet;
         }
         &__btn {
-            font-size: 1.25em;
+            font-size: sizes.$main-font-size-large-tablet;
+        }
+    }
+    @include q.large-phone {
+        &__info {
+            @include mixins.section-padding(sizes.$large-phone-padding);
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        &__main-heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-phone);
+        }
+        &__text {
+            font-size: sizes.$main-font-size-large-phone;
+        }
+        &__btn {
+            font-size: sizes.$main-font-size-large-phone;
         }
     }
 }
