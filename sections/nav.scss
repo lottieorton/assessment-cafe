@@ -33,5 +33,14 @@
     @include q.laptop {
         @include mixins.section-padding(sizes.$laptop-padding);
     }
-    
+
+    @include q.large-tablet {
+        @include mixins.section-padding(sizes.$large-tablet-padding);
+        &__icon {
+            font-size: 2em;
+        }
+        &__item {
+            font-size: 0.85em
+        }
+    }
 }

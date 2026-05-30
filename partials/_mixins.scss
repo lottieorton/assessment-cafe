@@ -16,9 +16,9 @@
     color: $text-color;
 }
 
-@mixin section-header {
+@mixin section-header($font-size) {
     font-family: fonts.$header-font;
-    font-size: 3em;
+    font-size: $font-size;
 }
 
 @mixin font-styling ($font-family, $font-size) {

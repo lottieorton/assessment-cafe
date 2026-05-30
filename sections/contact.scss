@@ -19,8 +19,7 @@
         margin-right: 1em;
     }
     &__heading {
-        @include mixins.section-header;
-
+        @include mixins.section-header(sizes.$section-header-font-size-large);
     }
     &__heading-icon {
         align-self: center;
@@ -42,7 +41,7 @@
         @include mixins.flex(row, space-between);
         flex-wrap: wrap;
         gap: 0.25em;
-        
+
     }
     &__form-question-label {
         width: 100%;
@@ -71,8 +70,37 @@
 
     @include q.laptop {
         @include mixins.section-padding(sizes.$laptop-padding);
+        padding-top: 5em;
+        padding-bottom: 5em;
         &__form {
             padding: 3em;
+        }
+    }
+
+    @include q.large-tablet {
+        @include mixins.section-padding(sizes.$large-tablet-padding);
+        padding-top: 7.25em;
+        padding-bottom: 7.25em;
+        &__heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-tablet);
+        }
+        &__heading-icon {
+            font-size: 2.5em;
+        }
+        &__form-question-label {
+            font-size: 1.25em;
+        }
+        &__form-question-input {
+            height: 1.5em;
+            @include mixins.font-styling(fonts.$page-font, 1em);
+            &--textarea {
+                height: 6rem;
+            }
+        }
+        &__btn {
+            @include mixins.button-styling(colors.$text-light, 1.25em);
+            background-color: colors.$main-green;
+            margin-top: 0.85em;
         }
     }
 }

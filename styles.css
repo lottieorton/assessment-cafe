@@ -36,6 +36,18 @@
     padding-right: 4rem;
   }
 }
+@media screen and (max-width: 1025px) {
+  .navbar {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .navbar__icon {
+    font-size: 2em;
+  }
+  .navbar__item {
+    font-size: 0.85em;
+  }
+}
 
 .header {
   display: flex;
@@ -96,6 +108,22 @@
   .header__info {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .header__info {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .header__main-heading {
+    font-family: "Rammetto One";
+    font-size: 2.5em;
+  }
+  .header__text {
+    font-size: 1.25em;
+  }
+  .header__btn {
+    font-size: 1.25em;
   }
 }
 
@@ -166,6 +194,7 @@
 .menu__card-title {
   font-family: "Open Sans";
   font-size: 1.5em;
+  text-align: center;
 }
 .menu__card-dietary-container {
   display: flex;
@@ -186,11 +215,34 @@
 .menu__card-dietary-label {
   font-family: "Open Sans";
   font-size: 0.85em;
+  text-align: center;
 }
 @media screen and (max-width: 1081px) {
   .menu {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .menu {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .menu__heading {
+    font-family: "Rammetto One";
+    font-size: 2.5em;
+  }
+  .menu__category-wrapper-header {
+    font-size: 1.25em;
+  }
+  .menu__grid--columns-3 .menu__card {
+    width: calc((100% - 1.25em) / 2);
+  }
+  .menu__card-title {
+    font-size: 1.25em;
+  }
+  .menu__card-dietary-label {
+    font-size: 0.75em;
   }
 }
 
@@ -242,11 +294,11 @@
   width: 100%;
   gap: 0.75em;
 }
-.reviews__quote-left-icon {
+.reviews__quote-icon--left {
   font-size: 1.5em;
   align-self: flex-start;
 }
-.reviews__quote-right-icon {
+.reviews__quote-icon--right {
   font-size: 1.5em;
   align-self: flex-end;
 }
@@ -266,6 +318,33 @@
   .reviews {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .reviews {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .reviews__heading {
+    font-family: "Rammetto One";
+    font-size: 2.5em;
+  }
+  .reviews__grid--columns-2 .reviews__card {
+    width: 100%;
+  }
+  .reviews__quote-icon--left {
+    font-size: 1.25em;
+    align-self: flex-start;
+  }
+  .reviews__quote-icon--right {
+    font-size: 1.25em;
+    align-self: flex-end;
+  }
+  .reviews__quote-text {
+    font-size: 1.1em;
+  }
+  .reviews__quote-info {
+    font-size: 0.85em;
   }
 }
 
@@ -304,6 +383,24 @@
   .footer {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .footer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  .footer__copyright-icon {
+    font-size: 1.5em;
+  }
+  .footer__copyright-text {
+    font-family: "Open Sans";
+    font-size: 1em;
+  }
+  .footer__social-icon {
+    font-size: 2em;
   }
 }
 
@@ -395,9 +492,50 @@
   .contact {
     padding-left: 4rem;
     padding-right: 4rem;
+    padding-top: 5em;
+    padding-bottom: 5em;
   }
   .contact__form {
     padding: 3em;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .contact {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 7.25em;
+    padding-bottom: 7.25em;
+  }
+  .contact__heading {
+    font-family: "Rammetto One";
+    font-size: 2.5em;
+  }
+  .contact__heading-icon {
+    font-size: 2.5em;
+  }
+  .contact__form-question-label {
+    font-size: 1.25em;
+  }
+  .contact__form-question-input {
+    height: 1.5em;
+    font-family: "Open Sans";
+    font-size: 1em;
+  }
+  .contact__form-question-input--textarea {
+    height: 6rem;
+  }
+  .contact__btn {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 1.25em;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    width: auto;
+    border: 3px solid white;
+    cursor: pointer;
+    background-color: #689572;
+    margin-top: 0.85em;
   }
 }
 

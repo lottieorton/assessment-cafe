@@ -15,7 +15,7 @@
         flex: 1 1 100%;
     }
     &__main-heading {
-        @include mixins.section-header;
+        @include mixins.section-header(sizes.$section-header-font-size-large);
         margin-bottom: 0.25em;
     }
     &__text {
@@ -42,6 +42,21 @@
     @include q.laptop {
         &__info {
             @include mixins.section-padding(sizes.$laptop-padding);
+        }
+    }
+
+    @include q.large-tablet {
+        &__info {
+            @include mixins.section-padding(sizes.$large-tablet-padding);
+        }
+        &__main-heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-tablet);
+        }
+        &__text {
+            font-size: 1.25em;
+        }
+        &__btn {
+            font-size: 1.25em;
         }
     }
 }

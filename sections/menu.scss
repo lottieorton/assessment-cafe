@@ -12,7 +12,7 @@
     padding-top: 3em;
     padding-bottom: 3em;
     &__heading {
-        @include mixins.section-header;
+        @include mixins.section-header(sizes.$section-header-font-size-large);
         color: colors.$bright-pink;
     }
     &__category {
@@ -56,6 +56,7 @@
     }
     &__card-title {
         @include mixins.font-styling(fonts.$page-font, 1.5em);
+        text-align: center;
     }
     &__card-dietary-container {
         @include mixins.flex(row, center);
@@ -71,10 +72,34 @@
     }
     &__card-dietary-label {
         @include mixins.font-styling(fonts.$page-font, 0.85em);
+        text-align: center;
     }
 
     @include q.laptop {
         @include mixins.section-padding(sizes.$laptop-padding);
+    }
+
+    @include q.large-tablet {
+        @include mixins.section-padding(sizes.$large-tablet-padding);
+        &__heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-tablet);
+        }
+        &__category-wrapper-header {
+            font-size: 1.25em; 
+        }
+        &__grid {
+            &--columns-3 {
+                .menu__card {
+                    width: calc((100% - 1.25em) / 2);
+                }
+            }
+        }
+        &__card-title {
+            font-size: 1.25em;
+        }
+        &__card-dietary-label {
+            font-size: 0.75em;
+        }
     }
 }            
                     
