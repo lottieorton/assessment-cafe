@@ -16,7 +16,6 @@
         @include mixins.flex(column);
         @include mixins.colors(colors.$bright-pink, colors.$text-light);
         gap: 1.5em;
-        margin-right: 1em;
     }
     &__heading {
         @include mixins.section-header(sizes.$section-header-font-size-large);
@@ -72,6 +71,7 @@
         @include mixins.section-padding(sizes.$laptop-padding);
         padding-top: 5em;
         padding-bottom: 5em;
+        gap: 4em;
         &__form {
             padding: 3em;
         }
@@ -81,6 +81,7 @@
         @include mixins.section-padding(sizes.$large-tablet-padding);
         padding-top: 7.25em;
         padding-bottom: 7.25em;
+        gap: 3em;
         &__heading {
             @include mixins.section-header(sizes.$section-header-font-size-large-tablet);
         }
@@ -101,6 +102,15 @@
             @include mixins.button-styling(colors.$text-light, 1.25em);
             background-color: colors.$main-green;
             margin-top: 0.85em;
+        }
+    }
+
+    @include q.tablet {
+        @include mixins.flex(column);
+        padding-top: 4em;
+        padding-bottom: 4em;
+        &__heading-container {
+            @include mixins.flex(row);
         }
     }
 }

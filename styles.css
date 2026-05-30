@@ -423,7 +423,6 @@
   background-color: #FAA196;
   color: white;
   gap: 1.5em;
-  margin-right: 1em;
 }
 .contact__heading {
   font-family: "Rammetto One";
@@ -494,6 +493,7 @@
     padding-right: 4rem;
     padding-top: 5em;
     padding-bottom: 5em;
+    gap: 4em;
   }
   .contact__form {
     padding: 3em;
@@ -505,6 +505,7 @@
     padding-right: 3rem;
     padding-top: 7.25em;
     padding-bottom: 7.25em;
+    gap: 3em;
   }
   .contact__heading {
     font-family: "Rammetto One";
@@ -536,6 +537,20 @@
     cursor: pointer;
     background-color: #689572;
     margin-top: 0.85em;
+  }
+}
+@media screen and (max-width: 769px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  .contact__heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
