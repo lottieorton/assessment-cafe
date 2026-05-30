@@ -5,11 +5,14 @@
 @use '../partials/sizes';
 
 .navbar {
+    position: sticky;
+    top: 0;
     @include mixins.flex(row, space-between);
     @include mixins.section-padding(sizes.$large-padding);
     align-items: center;
     padding-top: 1em;
     padding-bottom: 1em;
+    background-color: colors.$text-light;
     &__icon {
         color: colors.$bright-pink;
         font-size: 2.5em;
