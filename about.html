@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="https://kit.fontawesome.com/4f07e26e28.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&display=swap" rel="stylesheet">    
+    <title>About</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="./index.html" class="navbar__link"><i class="fa-solid fa-mug-hot navbar__icon navbar__icon--flipped"></i></a>
+        <input type="checkbox" id="navbar-toggle" class="navbar__list-toggle" />
+        <label for="navbar-toggle" class="navbar__hamburger">&#9776;</label>
+        <ul class="navbar__list">
+            <li class="navbar__item">
+                <a href="./about.html" class="navbar__link">ABOUT</a>
+            </li>
+            <li class="navbar__item">
+                <a href="./contact.html" class="navbar__link">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+    <header class="about-header">
+        <img class="about-header__image" src="./assets/hero_image.jpg" alt="Pink cafe" />
+        <div class="about-header__info">
+            <h1 class="about-header__main-heading">About Us</h1>
+            <div class="about-header__text-container">
+                <p class="about-header__text about-header__text--bold">Opening times: </p>
+                <p class="about-header__text">Mon - Fri: 7am - 3pm</p>
+                <p class="about-header__text">Sat - Sun: 9am - 2pm</p>
+            </div>
+        </div>
+    </header>
+    <main class="about-main">
+        <h2 class="about-main__heading">Our Story</h2>
+        <div class="about-main__content-container">
+            <div class="about-main__section about-main__text-container">
+                <p class="about-main__text">Welcome to The Pink Coffee Corner, your cozy home away from home right in the heart of Melbourne. Born out of a passion for smooth, premium lattes and vibrant community spaces, we pride ourselves on serving up the best coffee in town alongside a welcoming smile. Whether you are catching up with friends, settling in with a smooth flat white to get some work done using our free Wi-Fi, or dropping by for lunch, our vibrant little corner is designed to be your perfect daily escape.</p>
+                <p class="about-main__text">At The Pink Coffee Corner, we believe that incredible cafe experiences should be for everyone. That’s why we’ve carefully crafted a diverse, delicious menu packed with premium specialty drinks, fresh smoothies, and decadent treats. From our crowd-favorite chocolate cupcakes and donuts to rich cheesecakes, we intentionally offer a wide variety of vegan, gluten-free, and dietary-friendly options. We don't compromise on flavor, so you can always indulge safely and happily.</p>
+            </div>
+            <div class="about-main__section about-main__section-menu">
+                <div class="about-main__image-grid">
+                    <img src="./assets/vanilla_cake.jpg" alt="Vanilla cupcake" class="about-main__image" />
+                    <img src="./assets/coffee.jpg" alt="Flat white" class="about-main__image" />
+                    <img src="./assets/donuts.jpg" alt="Donut" class="about-main__image" />
+                    <img src="./assets/green_smoothie.jpg" alt="Green smoothie" class="about-main__image" />
+                    <img src="./assets/raspberry_cupcake.jpg" alt="Raspberry cupcake" class="about-main__image" />
+                </div>
+                <a href="./index.html#menu" class="about-main__btn">Checkout our menu</a>
+            </div>
+            <div class="about-main__section about-main__address">
+                <h3 class="about-main__address-header">Drop by and say hi:</h3>
+                <p class="about-main__address-text">
+                    123 Lane-Way Lane,
+                    <br />
+                    Melbourne VIC 3000
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__copyright-info">
+            <i class="fa-solid fa-mug-hot footer__copyright-icon footer__copyright-icon--flipped"></i>
+            <p class="footer__copyright-text">Copyright 2024</p>
+        </div>
+        <i class="fa-brands fa-square-instagram footer__social-icon"></i>
+    </footer>
+</body>
+</html>
