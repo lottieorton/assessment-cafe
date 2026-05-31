@@ -1,0 +1,113 @@
+@use '../partials/colors';
+@use '../partials/fonts';
+@use '../partials/mixins';
+@use '../partials/media_queries' as q;
+@use '../partials/sizes';
+
+.about-main {
+    @include mixins.flex(column);
+    @include mixins.section-padding(sizes.$large-padding);
+    gap: 1em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    width: 100%;
+    background-color: colors.$text-light;
+    align-items: center;
+    &__heading {
+        @include mixins.section-header(sizes.$section-header-font-size-large);
+        color: colors.$bright-pink;
+    }
+    &__content-container {
+        @include mixins.flex(column);
+        font-size: sizes.$main-font-size-large;
+        width: 100%;
+        gap: 2em;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+    }
+    &__section {
+        @include mixins.colors(colors.$pale-pink, colors.$text-dark);
+        padding: 2em;
+    }
+    &__text-container {
+        @include mixins.flex(column);
+        gap: 1.25em;
+    }
+    &__text {
+        @include fonts.page-font-bold-italics;
+        
+    }
+    &__section-menu {
+        @include mixins.flex(column);
+        gap: 2em;
+    }
+    &__image-grid {
+        @include mixins.flex(row, space-between);
+        flex-wrap: wrap;
+        gap: 1.25em;
+        width: 100%;
+    }
+    &__image {
+        flex: 1 1 150px;
+        object-fit: cover;
+        height: auto;
+        max-width: 150px;
+        width: 100%;
+    }
+    &__btn {
+        @include mixins.button-styling(colors.$text-light, 1em);
+        align-self: center;
+    }
+    &__address {
+        @include mixins.flex;
+        gap: 1em;
+    }
+    &__address-header {
+        @include fonts.page-font-bold;
+
+    }
+    &__address-text {
+        font-family: fonts.$page-font;
+    }
+    
+    @include q.laptop {
+        @include mixins.section-padding(sizes.$laptop-padding);
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    @include q.large-tablet {
+        @include mixins.section-padding(sizes.$large-tablet-padding);
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        &__heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-tablet);
+        }
+        &__content-container {
+            font-size: sizes.$main-font-size-large-tablet;
+        }
+    }
+
+    @include q.tablet {
+        &__image {
+            max-width: 100px;
+        }
+    }
+
+    @include q.large-phone {
+        @include mixins.section-padding(sizes.$large-phone-padding);
+        padding-top: 2em;
+        padding-bottom: 2em;
+        gap: 0;
+        &__heading {
+            @include mixins.section-header(sizes.$section-header-font-size-large-phone);
+        }
+        &__section {
+            padding: 1em;
+        }
+        &__content-container {
+            font-size: sizes.$main-font-size-about-large-phone;
+        }
+    }
+}
+                 

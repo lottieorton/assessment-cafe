@@ -734,6 +734,240 @@
   }
 }
 
+.about-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+.about-header__image {
+  flex: 1 1 50%;
+  width: 100%;
+  object-fit: cover;
+  max-height: 100vh;
+}
+.about-header__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  background-color: #689572;
+  color: white;
+  align-items: flex-end;
+  flex: 1 1 100%;
+}
+.about-header__main-heading {
+  font-family: "Rammetto One";
+  font-size: 3em;
+  margin-bottom: 0.25em;
+}
+.about-header__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0.5em;
+}
+.about-header__text {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+}
+.about-header__text--bold {
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+@media screen and (max-width: 1200px) {
+  .about-header {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+  .about-header__info {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    align-items: flex-start;
+  }
+  .about-header__text-container {
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 1081px) {
+  .about-header__info {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .about-header__info {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .about-header__main-heading {
+    font-family: "Rammetto One";
+    font-size: 2.5em;
+  }
+  .about-header__text-container {
+    gap: 0.3em;
+  }
+  .about-header__text {
+    font-size: 1.25em;
+  }
+}
+@media screen and (max-width: 577px) {
+  .about-header__info {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .about-header__main-heading {
+    font-family: "Rammetto One";
+    font-size: 2em;
+  }
+  .about-header__text {
+    font-size: 1.1em;
+  }
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  gap: 1em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+}
+.about-main__heading {
+  font-family: "Rammetto One";
+  font-size: 3em;
+  color: #FAA196;
+}
+.about-main__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1.5em;
+  width: 100%;
+  gap: 2em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+.about-main__section {
+  background-color: #EBC9C4;
+  color: #404040;
+  padding: 2em;
+}
+.about-main__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.25em;
+}
+.about-main__text {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: italic;
+}
+.about-main__section-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2em;
+}
+.about-main__image-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  width: 100%;
+}
+.about-main__image {
+  flex: 1 1 150px;
+  object-fit: cover;
+  height: auto;
+  max-width: 150px;
+  width: 100%;
+}
+.about-main__btn {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  width: auto;
+  border: 3px solid white;
+  cursor: pointer;
+  align-self: center;
+}
+.about-main__address {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
+}
+.about-main__address-header {
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+.about-main__address-text {
+  font-family: "Open Sans";
+}
+@media screen and (max-width: 1081px) {
+  .about-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .about-main {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  }
+  .about-main__heading {
+    font-family: "Rammetto One";
+    font-size: 2.5em;
+  }
+  .about-main__content-container {
+    font-size: 1.25em;
+  }
+}
+@media screen and (max-width: 769px) {
+  .about-main__image {
+    max-width: 100px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .about-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    gap: 0;
+  }
+  .about-main__heading {
+    font-family: "Rammetto One";
+    font-size: 2em;
+  }
+  .about-main__section {
+    padding: 1em;
+  }
+  .about-main__content-container {
+    font-size: 1em;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
