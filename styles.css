@@ -566,6 +566,7 @@
   padding-top: 4em;
   padding-bottom: 4em;
   gap: 6em;
+  min-height: 92vh;
 }
 .contact__heading-container {
   display: flex;
@@ -592,7 +593,6 @@
   padding: 4em;
   border-radius: 1em;
   box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
-  flex-grow: 1;
   width: 100%;
   max-width: 800px;
 }
@@ -644,6 +644,7 @@
     padding-top: 5em;
     padding-bottom: 5em;
     gap: 4em;
+    min-height: 85vh;
   }
   .contact__form {
     padding: 3em;
@@ -659,6 +660,7 @@
     padding-top: 4em;
     padding-bottom: 4em;
     gap: 3em;
+    min-height: 90vh;
   }
   .contact__heading-container {
     display: flex;

@@ -12,6 +12,7 @@
     padding-top: 4em;
     padding-bottom: 4em;
     gap: 6em;
+    min-height: 92vh;
     &__heading-container {
         @include mixins.flex(column);
         @include mixins.colors(colors.$bright-pink, colors.$text-light);
@@ -31,7 +32,6 @@
         padding: 4em;
         border-radius: 1em;
         box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
-        flex-grow: 1;
         width: 100%;
         max-width: 800px;
     }
@@ -65,12 +65,13 @@
         background-color: colors.$main-green;
         margin-top: 1em;
     }
-
+    
     @include q.laptop {
         @include mixins.section-padding(sizes.$laptop-padding);
         padding-top: 5em;
         padding-bottom: 5em;
         gap: 4em;
+        min-height: 85vh;
         &__form {
             padding: 3em;
         }
@@ -82,6 +83,7 @@
         padding-top: 4em;
         padding-bottom: 4em;
         gap: 3em;
+        min-height: 90vh;
         &__heading-container {
             @include mixins.flex(row);
         }
